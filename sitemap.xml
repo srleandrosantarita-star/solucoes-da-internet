@@ -2,45 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://solucoesdainternet.com.br/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://solucoesdainternet.com.br/criacao-de-sites-balneario-camboriu.html</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solucoesdainternet.com.br/conserto-de-computador-balneario-camboriu.html</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://solucoesdainternet.com.br/recuperacao-de-dados-balneario-camboriu.html</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://solucoesdainternet.com.br/suporte-tecnico-balneario-camboriu.html</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://solucoesdainternet.com.br/automacao-de-processos-balneario-camboriu.html</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://solucoesdainternet.com.br/chatbot-whatsapp-ia-balneario-camboriu.html</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://solucoesdainternet.com.br/landing-pages-balneario-camboriu.html</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solucoesdainternet.com.br/celular/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://solucoesdainternet.com.br/computador/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://solucoesdainternet.com.br/internet/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://solucoesdainternet.com.br/privacidade.html</loc>

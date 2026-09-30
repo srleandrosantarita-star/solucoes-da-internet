@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Gera as cinco páginas de serviço a partir do conteúdo definido em PAGES.
+Gera as páginas de serviço a partir do conteúdo definido em PAGES.
 
     python tools/gerar-paginas-servico.py
 
 Os arquivos são sempre escritos na raiz do repositório, independente do
 diretório de onde o script for chamado. Os arquivos gerados SÃO versionados —
-o script existe para manter as cinco páginas consistentes entre si, não para
+o script existe para manter as páginas consistentes entre si, não para
 substituí-las no deploy (o GitHub Pages serve o HTML direto, sem build).
 
 Para alterar o conteúdo de uma página, edite PAGES e rode o script de novo.
@@ -135,6 +135,46 @@ PAGES = [
    ("Qual o horário de atendimento?","Atendemos de segunda a sábado, das 8h às 20h — inclusive no sábado, quando muita empresa fica sem quem chamar, e até as 20h, o que ajuda quem só consegue parar para resolver TI depois do expediente."),
    ("Qual o tempo de resposta?","Chamados remotos costumam ser os mais rápidos, já que começam assim que recebemos a mensagem dentro do horário de atendimento. Para quem tem acompanhamento contínuo, o tempo de resposta é acordado em contrato, por escrito — em vez de ficar no informal."),
    ("Vocês cuidam também do site e dos sistemas?","Sim. Além da infraestrutura, desenvolvemos e damos manutenção em sites, sistemas e automações — então dá para resolver tudo com um único contato.")
+ ]
+},
+{
+ "slug":"conserto-de-computador-balneario-camboriu.html",
+ "nav":"Conserto de Computadores",
+ "h1":"Conserto, Formatação e Manutenção de Computadores e Notebooks em Balneário Camboriú",
+ "title":"Conserto e Formatação de Computador e Notebook em Balneário Camboriú/SC — Soluções da Internet",
+ "desc":"Técnico de informática em Balneário Camboriú e Camboriú: conserto, formatação, limpeza, remoção de vírus e troca de peças de computadores e notebooks, com atendimento presencial e remoto.",
+ "sub":"Computador lento, travando, com vírus ou que não liga mais. Resolvemos para você e para a sua empresa, com atendimento presencial em Balneário Camboriú e Camboriú e remoto no resto do Brasil.",
+ "svc_name":"Conserto e Manutenção de Computadores e Notebooks",
+ "cities":["Balneário Camboriú","Camboriú"],
+ "intro":[
+   "Computador com problema atrapalha o trabalho, o estudo e até as contas do mês. A <strong>Soluções da Internet</strong> é um <strong>técnico de informática em Balneário Camboriú</strong> que atende tanto quem usa o computador em casa quanto empresas, com <strong>conserto, formatação e manutenção de computadores e notebooks</strong>.",
+   "Antes de qualquer serviço, você recebe o diagnóstico explicado em português claro e o orçamento. Quer saber como está a máquina antes de nos chamar? Use a nossa <a href=\"computador/\">Análise do Computador</a>, um programa gratuito para Windows que verifica o hardware e aponta os problemas encontrados."
+ ],
+ "incl_title":"O que resolvemos",
+ "incl":[
+   "<strong>Formatação e reinstalação do Windows</strong> — com os programas e drivers necessários para você voltar a usar o computador.",
+   "<strong>Computador ou notebook lento</strong> — limpeza, otimização e ajuste do sistema para recuperar o desempenho.",
+   "<strong>Remoção de vírus</strong> e configuração de segurança básica.",
+   "<strong>Troca e upgrade de peças</strong> — memória, SSD e outros componentes, quando a troca vale mais a pena que o computador novo.",
+   "<strong>Limpeza interna</strong> — para reduzir o aquecimento e o barulho da ventoinha.",
+   "<strong>Instalação de programas e impressoras</strong>, além de configuração de Wi-Fi e rede.",
+   "<strong>Arquivos perdidos ou HD com defeito</strong> — veja também nosso serviço de <a href=\"recuperacao-de-dados-balneario-camboriu.html\">recuperação de dados</a>.",
+   "<strong>Atendimento remoto</strong> — muitos problemas de sistema são resolvidos pela internet, sem precisar levar o computador."
+ ],
+ "steps_title":"Como funciona",
+ "steps":[
+   ("Contato","Você chama no WhatsApp e conta o que está acontecendo com o computador."),
+   ("Diagnóstico","Identificamos a causa, remotamente quando dá e presencialmente quando precisa."),
+   ("Orçamento","Você recebe o valor antes, e o serviço só começa depois que você autoriza."),
+   ("Entrega","Devolvemos funcionando e explicamos o que foi feito e como evitar que o problema volte.")
+ ],
+ "faq":[
+   ("Quanto custa formatar um computador?","Depende do que o computador precisa: só a formatação, formatação com cópia dos arquivos ou também troca de peças. Você recebe o valor antes de começarmos e decide se quer seguir."),
+   ("Vou perder meus arquivos na formatação?","Antes de formatar, combinamos com você o que precisa ser guardado: documentos, fotos e outros arquivos importantes. Se o computador nem liga mais e os arquivos estão presos nele, o caso é de recuperação de dados, que também fazemos."),
+   ("Vocês atendem pessoa física ou só empresa?","Os dois. Atendemos quem usa o computador em casa e também empresas de qualquer tamanho."),
+   ("Como é o atendimento?","Presencial em Balneário Camboriú e Camboriú, ou remoto, pela internet, quando o problema é de sistema. O remoto costuma ser mais rápido, porque não depende de deslocamento."),
+   ("Vale a pena consertar ou é melhor comprar outro?","Nem sempre vale consertar, e dizemos isso com franqueza. Muitas vezes um SSD e mais memória deixam o computador rápido de novo por bem menos que um novo. Quando o conserto não compensa, você fica sabendo antes de gastar."),
+   ("Qual o horário de atendimento?","De segunda a sábado, das 8h às 20h.")
  ]
 },
 {
@@ -458,7 +498,9 @@ def build(p, others):
         ]}
 
     intro = "\n".join("      <p>%s</p>" % t for t in p["intro"])
-    incl = "\n".join("        <li>%s</li>" % i for i in p["incl"])
+    # O <span> mantém negrito e texto como um único item flex; sem ele, cada
+    # pedaço do <li> vira uma coluna separada ao lado do ícone.
+    incl = "\n".join("        <li><span>%s</span></li>" % i for i in p["incl"])
     steps = "\n".join(
         '        <article class="service-card reveal" style="--delay: %.2fs">\n'
         '          <div class="step-num">%d</div>\n'
